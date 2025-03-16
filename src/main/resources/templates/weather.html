@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html xmlns:th = "http://www.thymeleaf.org" lang = "es">
 <head>
     <meta charset = "UTF-8">
-    <title>Title</title>
+    <title>Clima</title>
 </head>
 <body>
-
+    <h1>Información del clima</h1>
+    <p>Ciudad: <span th:text = "${cityName}"></span></p>
+    <p>Clima: <span th:text = "${weatherDescription}"></span></p>
+    <p>Temperatura: <span th:text="${temperature} + '°C'"></span></p>
 </body>
 </html>
