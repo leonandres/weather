@@ -38,7 +38,10 @@ public class TaskController {
             JsonNode root = mapper.readTree(response);
             model.addAttribute("cityName", root.path("name").asText());
             model.addAttribute("weatherDescription", root.path("weather").get(0).path("description").asText());
-            model.addAttribute("temperature", root.path("main").path("temp").asDouble());
+
+            double temperature = root.path("main").path("temp").asDouble() - 273.15;//La api retorna la temperatura en grados Kelvin
+            String formattedTemperature = String.format("%.1f", temperature);
+            model.addAttribute("temperature", formattedTemperature);
             return "weather";
         } catch (Exception e) {
             model.addAttribute("error", "Error al obtener el clima: " + e.getMessage());
