@@ -2,7 +2,6 @@ package com.weather.lion.controller;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import com.fasterxml.jackson.databind.node.ArrayNode;
 import com.weather.lion.entity.Task;
 import com.weather.lion.service.TaskService;
 import com.weather.lion.service.WeatherService;

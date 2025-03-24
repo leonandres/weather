@@ -1,10 +1,21 @@
 <!DOCTYPE html>
-<html lang = "es">
+<html xmlns:th = "http://www.thymeleaf.org" lang = "es">
 <head>
     <meta charset = "UTF-8">
-    <title>Tasks</title>
+    <title>Gestión de tareas</title>
 </head>
 <body>
+    <h1>Tareas</h1>
+
+    <h2>Agregar tarea: </h2>
+    <form action = "/tasks/add" method = "post">
+        <input type = "text" id = "title" name = "title" required>
+        <br>
+        <label for = "description">Descripcion: </label>
+        <input type = "text" required>
+        <br>
+        <button type = "submit">Agregar tarea</button>
+    </form>
 
 </body>
 </html>
