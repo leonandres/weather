@@ -2,12 +2,26 @@
 <html xmlns:th = "http://www.thymeleaf.org" lang = "es">
 <head>
     <meta charset = "UTF-8">
+    <link th:href = "@{/css/styles.css}" rel="stylesheet">
+    <link th:href = "@{/css/weather.css}" rel="stylesheet">
+    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Clima</title>
 </head>
 <body>
-    <h1>Información del clima</h1>
-    <p>Ciudad: <span th:text = "${cityName}"></span></p>
-    <p>Clima: <span th:text = "${weatherDescription}"></span></p>
-    <p>Temperatura: <span th:text="${temperature} + '°C'"></span></p>
+    <main class = "container">
+        <div class = "weather-info">
+            <h1>Información del clima</h1>
+            <p>Ciudad: <span th:text = "${cityName}"></span></p>
+            <p>Clima: <span th:text = "${weatherDescription}"></span></p>
+            <p>Temperatura: <span th:text="${temperature} + '°C'"></span></p>
+        </div>
+    </main>
+
+    <footer class="weather-footer">
+        <a th:href="@{/}" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Volver</span>
+        </a>
+    </footer>
 </body>
 </html>
