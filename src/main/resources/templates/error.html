@@ -13,6 +13,12 @@
         </div>
     </div>
 
-    <p class = "error-message" th:text = "${error} ?: #{error.default.message}">Ha ocurrido un error inesperado. Intente nuevamente</p>
+    <p class = "error-message">Ha ocurrido un error inesperado. Intente nuevamente</p>
+
+    <div class = "error-actions">
+        <a th:href = "@{/}">
+            <span>Volver al inicio</span>
+        </a>
+    </div>
 </body>
 </html>
