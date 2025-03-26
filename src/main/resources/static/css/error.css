@@ -1,0 +1,8 @@
+.error-container {
+    background: linear-gradient(180deg, rgba(255, 0, 0, 1) 0%, rgba(255, 0, 0, 1) 100%);
+}
+
+.error-title {
+    color: #721c24;
+    margin-top: 0;
+}

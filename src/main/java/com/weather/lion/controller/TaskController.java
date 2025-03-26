@@ -20,9 +20,6 @@ public class TaskController {
     @Autowired
     private TaskService taskService;
 
-    @Autowired
-    private WeatherService weatherService;
-
     @GetMapping
     public List<Task> getAllTask(){
         return taskService.getAllTasks();
