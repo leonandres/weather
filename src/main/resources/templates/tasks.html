@@ -12,10 +12,17 @@
         <input type = "text" id = "title" name = "title" required>
         <br>
         <label for = "description">Descripcion: </label>
-        <input type = "text" required>
+        <input type = "text" id = "description" name = "description" required>
         <br>
         <button type = "submit">Agregar tarea</button>
     </form>
+
+    <h2>Lista de Tareas</h2>
+    <ul>
+        <li th:each = "task : ${tasks}">
+            <span th:text = "${task.title}"></span>: <span th:text = "${task.description}"></span>
+        </li>
+    </ul>
 
 </body>
 </html>
