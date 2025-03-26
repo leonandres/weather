@@ -13,6 +13,6 @@
         </div>
     </div>
 
-    <p>Mensaje de error por defecto</p>
+    <p class = "error-message" th:text = "${error} ?: #{error.default.message}">Ha ocurrido un error inesperado. Intente nuevamente</p>
 </body>
 </html>
