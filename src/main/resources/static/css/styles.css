@@ -14,10 +14,38 @@ body {
     flex-direction: column;
 }
 
+h1, h2, h3 {
+    margin-top: 0;
+    color: #2c3e50;
+}
+
+a {
+    color: #3498db;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #2980b9;
+    text-decoration: underline;
+}
+
 .container {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
+    background: white;
 }
 
+@media (min-width: 768px) {
+    :root {
+        --spacing: 1.25rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    :root {
+        --spacing-unit: 1.5rem;
+    }
+}

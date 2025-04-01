@@ -6,18 +6,77 @@ body {
 h1 {
     color: #2c3e50;
     border-bottom: 2px solid #3498db;
+}
 
+.weather-card {
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+    margin: 2rem auto;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
 }
 
 .weather-header {
+    background: linear-gradient(135deg, #3498db, #2c3e50);
     border-bottom: 3px solid #3498db;
     padding-bottom: 15px;
     margin-bottom: 20px;
 }
 
+.weather-header h1 {
+    color: white;
+    margin: 0 0 0.5rem 0;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-size: 1.25rem;
+    margin-top: 0.5rem;
+}
+
+.location i {
+    font-size: 1.1em;
+}
+
 .weather-info {
-    background: linear-gradient(#131d61, #3498db);
+    background: linear-gradient(to bottom, #131d61, #3498db);
+    padding: 1.5rem;
     display: grid;
     gap: 0.75rem;
 }
 
+.weather-content {
+    display: grid;
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+}
+
+@media (min-width: 600px) {
+    .weather-content {
+        grid-template-columns: 1fr 1fr;
+        align-items: center;
+    }
+}
+
+.weather-details {
+    display: grid;
+    gap: 1rem;
+}
+
+.weather-details p {
+    display: flex;
+    justify-content: space-between;
+}
+
+.weather-footer {
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}

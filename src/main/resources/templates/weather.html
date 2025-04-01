@@ -9,12 +9,23 @@
 </head>
 <body>
     <main class = "container">
-        <div class = "weather-info">
-            <h1>Información del clima</h1>
-            <p>Ciudad: <span th:text = "${cityName}"></span></p>
-            <p>Clima: <span th:text = "${weatherDescription}"></span></p>
-            <p>Temperatura: <span th:text="${temperature} + '°C'"></span></p>
-        </div>
+        <article class = "weather-card">
+            <header class = "weather-header">
+                <h1>Información del clima</h1>
+                <div class = "location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span th:text = "${cityName}">Ciudad</span>
+                </div>
+            </header>
+
+            <section class = "weather-info">
+                <div class = "weather-details">
+                    <p>Clima: <span th:text = "${weatherDescription}"></span></p>
+                    <p>Temperatura: <span th:text="${temperature} + '°C'"></span></p>
+                </div>
+            </section>
+
+        </article>
     </main>
 
     <footer class="weather-footer">
