@@ -1,38 +1,47 @@
 <!DOCTYPE html>
-<html xmlns:th = "http://www.thymeleaf.org" lang = "es">
+<html xmlns:th="http://www.thymeleaf.org" lang="es">
 <head>
-    <meta charset = "UTF-8">
-    <link th:href = "@{/css/styles.css}" rel="stylesheet">
-    <link th:href = "@{/css/weather.css}" rel="stylesheet">
-    <link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <meta charset="UTF-8">
+    <link th:href="@{/css/styles.css}" rel="stylesheet">
+    <link th:href="@{/css/weather.css}" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <title>Clima</title>
 </head>
 <body>
-    <main class = "container">
-        <article class = "weather-card">
-            <header class = "weather-header">
-                <h1>Información del clima</h1>
-                <div class = "location">
-                    <i class="fas fa-map-marker-alt"></i>
-                    <span th:text = "${cityName}">Ciudad</span>
-                </div>
-            </header>
+<main class="container">
+    <article class="weather-card">
+        <header class="weather-header">
+            <h1>Información del clima</h1>
+            <div class="location">
+                <i class="fas fa-map-marker-alt"></i>
+                <span th:text="${cityName}">Ciudad</span>
+            </div>
+        </header>
 
-            <section class = "weather-info">
-                <div class = "weather-details">
-                    <p>Clima: <span th:text = "${weatherDescription}"></span></p>
-                    <p>Temperatura: <span th:text="${temperature} + '°C'"></span></p>
-                </div>
-            </section>
+        <section class="weather-info">
+            <div class="weather-icon" th:classappend="${weatherClass}">
+                <i class="fas" th:class="${weatherIcon}"></i>
+            </div>
 
-        </article>
-    </main>
+            <div class="weather-details">
+                <p>
+                    <span>Clima:</span>
+                    <span th:text="${weatherDescription}">Descripción</span>
+                </p>
+                <p>
+                    <span>Temperatura:</span>
+                    <span th:text="${temperature} + '°C'"></span>
+                </p>
+            </div>
+        </section>
+    </article>
+</main>
 
-    <footer class="weather-footer">
-        <a th:href="@{/}" class="back-link">
-            <i class="fas fa-arrow-left"></i>
-            <span>Volver</span>
-        </a>
-    </footer>
+<footer class="weather-footer">
+    <a th:href="@{/}" class="back-link">
+        <i class="fas fa-arrow-left"></i>
+        <span>Volver</span>
+    </a>
+</footer>
 </body>
 </html>
