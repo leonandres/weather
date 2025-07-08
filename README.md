@@ -6,5 +6,11 @@
   <ul>
       <li>Temperatura actual, humedad y viento</li>
       <li>Búsqueda por ciudad</li>
-    </ul>
+  </ul>
+
+  <h2>Cómo usar</h2>
+  <p>
+    Abre <code>index.html</code> o visita la <a href = "">demo en vivo</a>
+        
+  </p>
 </div>
